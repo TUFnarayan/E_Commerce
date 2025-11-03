@@ -1,4 +1,4 @@
-# E-Commerce Application
+# E-Commerce_Application
 
 This is a full-stack E-Commerce application built using **React (Vite)** for the frontend and **ASP.NET Core Web API** for the backend.
 
@@ -6,8 +6,8 @@ The project is divided into two main parts:
 -EcommerceAPI(Backend)
 -frontendEcommmerce(frontend)
 
-
-## Project Structure
+ 
+# Project Structure
 
 E_Commerce/
 │
@@ -38,8 +38,7 @@ E_Commerce/
   - **Migrations** – Manages Entity Framework Core migrations for the database.
   - **Dtos** – Used to transfer data between layers.
 
-#### Run the backend:
-```bash
+# Run the backend:
 cd backend
 dotnet run
 The API will start (by default on port 5000 or 7067, depending on configuration).
@@ -59,7 +58,7 @@ npm install
 npm run dev
 The development server will start (usually on http://localhost:5173).
 
-Communication Between Frontend and Backend
+# Communication Between Frontend and Backend
 The frontend sends HTTP requests (using fetch or axios) to the backend API endpoints.
 
 Example:
