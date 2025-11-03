@@ -8,7 +8,7 @@ The project is divided into two main parts:
 
 2.frontendEcommerce → Frontend (React + Vite)
 
-#⚙️ Workflow Overview
+# ⚙️ Workflow Overview
 1. Backend (API Layer)
 
 The backend is developed using ASP.NET Core Web API.
