@@ -1,0 +1,49 @@
+# Project requirements and install commands for both frontend and backend
+
+# Frontend (React + Vite)
+# - Node.js (recommended LTS >= 18)
+# - npm (comes with Node) or yarn
+# Frontend packages (from package.json):
+# axios@^1.13.1
+# lucide-react@^0.552.0
+# react@^19.1.1
+# react-dom@^19.1.1
+# react-router-dom@^7.9.5
+# devDependencies: vite, @vitejs/plugin-react, tailwindcss, postcss, autoprefixer, eslint, types
+
+# Install frontend dependencies (run in frontend_ecommerce folder):
+# npm install
+# or
+# yarn install
+
+
+# Backend (ASP.NET Core Web API)
+# - .NET SDK (target framework: net9.0) -> install .NET 9 SDK
+# - SQL Server (localdb or MSSQL) for database during development
+# NuGet packages (from ECommerceAPI.csproj):
+# AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1
+# FluentValidation.AspNetCore 11.3.1
+# Microsoft.AspNetCore.OpenApi 9.0.10
+# Microsoft.EntityFrameworkCore 9.0.10
+# Microsoft.EntityFrameworkCore.SqlServer 9.0.10
+# Microsoft.EntityFrameworkCore.Tools 9.0.10
+# Swashbuckle.AspNetCore 9.0.6
+
+# Install backend dependencies and restore packages (run in ECommerceAPI folder):
+# dotnet restore
+
+# Database setup (example using LocalDB):
+# 1) Ensure connection string in ECommerceAPI/appsettings.json points to your SQL Server instance
+# 2) From the project folder run migrations (if present) and update DB:
+#    dotnet ef database update
+#    (Requires Microsoft.EntityFrameworkCore.Tools, already referenced)
+
+# Quick start (dev)
+# 1) Backend: open a terminal, run:
+#    cd ECommerceAPI
+#    dotnet run
+# 2) Frontend: in another terminal, run:
+#    cd frontend_ecommerce
+#    npm run dev
+
+
