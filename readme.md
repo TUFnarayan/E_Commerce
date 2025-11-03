@@ -61,7 +61,7 @@ The development server will start (usually on http://localhost:5173
 1. Fetch Products	GET	/api/products	Returns a list of all products
 2. Add   Order	POST	/api/orders	Creates a new order
 3. Add to Cart	POST	/api/cart	Adds item to the cart
-4 Fetch Cart	GET	/api/cart	Returns items in user’s cart
+4. Fetch Cart	GET	/api/cart	Returns items in user’s cart
 
 ✅ Make sure both frontend and backend servers are running simultaneously on their respective ports.
 
