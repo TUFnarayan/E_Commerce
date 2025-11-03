@@ -6,25 +6,6 @@ The project is divided into two main parts:
 -EcommerceAPI(Backend)
 -frontendEcommmerce(frontend)
 
- 
-# Project Structure
-
-E_Commerce/
-│
-├── frontendEcommmerce/ # React + Vite frontend
-│ ├── src/
-│ ├── public/
-│ ├── vite.config.js
-│ ├── package.json
-│ └── ...
-│
-└── EcommerceAPI/ # ASP.NET Core Web API backend
-├── Controllers/
-├── Data/
-├── Models/
-├── Program.cs
-├── appsettings.json
-└── ECommerceAPI.csproj
 
 ## Workflow Overview
 
