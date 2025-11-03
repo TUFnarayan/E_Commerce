@@ -52,35 +52,22 @@ Make sure both frontend and backend are running simultaneously on their respecti
 
 #Environment Setup
 Prerequisites
-Node.js (for frontend)
+1.Node.js (for frontend)
 
-.NET SDK (for backend)
+2..NET SDK (for backend)
 
 A code editor such as Visual Studio Code or Visual Studio
 
-Common Commands
-Frontend
-bash
-Copy code
-npm install       # Install dependencies
-npm run dev       # Start development server
-npm run build     # Build for production
-Backend
-bash
-Copy code
-dotnet restore    # Restore dependencies
-dotnet build      # Build project
-dotnet run        # Run API
 
 
 
 
 #Future Improvements
-Add authentication and authorization (JWT)
+1.Add authentication and authorization (JWT)
 
-Integrate payment gateway
+2.Integrate payment gateway
 
-Add admin panel for product and order management
+3.Add admin panel for product and order management
 
-Enhance UI with animations and better responsiveness
+4.Enhance UI with animations and better responsiveness
 
