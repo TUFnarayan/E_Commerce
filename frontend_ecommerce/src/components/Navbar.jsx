@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "../contenxt/CartContext";
+import { useAuth } from "../contenxt/AuthContext";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { cart, loading } = useCart(); // 🛒 Access cart context
+  const { cart, loading } = useCart(); 
+  const auth = useAuth();
 
   const totalItems = loading ? 0 : (cart ? cart.reduce((sum, item) => sum + (item.quantity || 0), 0) : 0);
 
@@ -43,6 +45,12 @@ function Navbar() {
           >
             Account
           </Link>
+
+          {!auth?.token ? (
+            <Link to="/login" className="hover:text-gray-200 transition-colors duration-200">Login</Link>
+          ) : (
+            <button onClick={auth.logout} className="hover:text-gray-200 transition-colors duration-200">Logout</button>
+          )}
 
           {/* Cart Icon */}
           <Link

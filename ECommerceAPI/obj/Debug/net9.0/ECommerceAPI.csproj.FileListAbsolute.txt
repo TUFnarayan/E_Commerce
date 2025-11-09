@@ -168,3 +168,10 @@ C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\obj\Debu
 C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\obj\Debug\net9.0\ECommerceAPI.pdb
 C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\obj\Debug\net9.0\ECommerceAPI.genruntimeconfig.cache
 C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\obj\Debug\net9.0\ref\ECommerceAPI.dll
+C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\NARAYAN DEVGAN\OneDrive\Desktop\backend_ecommerce\ECommerceAPI\obj\Debug\net9.0\ECommerceAPI.sourcelink.json
