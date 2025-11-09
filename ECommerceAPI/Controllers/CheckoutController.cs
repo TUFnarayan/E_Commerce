@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using ECommerceAPI.Data;
 using ECommerceAPI.Models;
@@ -7,6 +9,7 @@ namespace ECommerceAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CheckoutController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -16,19 +19,21 @@ namespace ECommerceAPI.Controllers
             _context = context;
         }
 
-        // ✅ Checkout endpoint
+        
         [HttpPost("{customerName}")]
         public async Task<ActionResult<Order>> Checkout(string customerName)
         {
-            // Get all items in the cart
-            var cartItems = await _context.CartItems.Include(c => c.Product).ToListAsync();
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? User.FindFirstValue("sub");
+            if (string.IsNullOrEmpty(userId)) return Unauthorized();
+
+            var cartItems = await _context.CartItems.Include(c => c.Product).Where(c => c.Cart != null && c.Cart.UserId == userId).ToListAsync();
             if (cartItems == null || !cartItems.Any())
                 return BadRequest("Cart is empty!");
 
-            // Create a new order
             var order = new Order
             {
                 CustomerName = customerName,
+                UserId = userId,
                 Items = cartItems.Select(c => new OrderItem
                 {
                     ProductId = c.ProductId,
@@ -36,7 +41,6 @@ namespace ECommerceAPI.Controllers
                 }).ToList()
             };
 
-            // Add order and clear cart
             _context.Orders.Add(order);
             _context.CartItems.RemoveRange(cartItems);
             await _context.SaveChangesAsync();

@@ -6,8 +6,10 @@ namespace ECommerceAPI.Models
         public string CustomerName { get; set; } = string.Empty;
         public DateTime OrderDate { get; set; } = DateTime.Now;
 
-        public decimal TotalAmount { get; set; }   // ✅ Added for order summary
+        public string? UserId { get; set; }
 
-        public List<OrderItem> Items { get; set; } = new List<OrderItem>(); // ✅ Avoid null refs
+        public decimal TotalAmount { get; set; }
+
+        public List<OrderItem> Items { get; set; } = new List<OrderItem>();
     }
 }
